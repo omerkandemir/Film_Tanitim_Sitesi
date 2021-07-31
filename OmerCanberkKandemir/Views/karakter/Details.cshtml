@@ -1,0 +1,107 @@
+﻿@model OmerCanberkKandemir.Models.Model.karakter
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>karakter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.gezegen.Gezegenadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gezegen.Gezegenadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mezhep.Mezhepadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mezhep.Mezhepadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.silah.KullandığıSilah)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.silah.KullandığıSilah)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tur.turadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tur.turadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.baslik)
+        </dt>
+
+        <dd>
+            @Model.baslik
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </dt>
+
+        <dd>
+            <img src="@Model.ResimURL" width="150" height="100" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.yazi)
+        </dt>
+
+        <dd>
+            @Model.yazi
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usta)
+        </dt>
+
+        <dd>
+            @Model.usta
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.padawan)
+        </dt>
+
+        <dd>
+            @Model.padawan
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dogduguyil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dogduguyil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.olumyili)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.olumyili)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.karakterID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Üye ol</title>
+    <link href="~/Content/uyeol.css" rel="stylesheet" />
+</head>
+<body>
+<div class="arkaresimsaydamlik">
+<form class="box" action="/Kullanici/Login" method="post">
+  <h1>Üye Girişi</h1>
+ <input type="text" name="kullaniciadi" placeholder="Kullanıcı Adı">
+ <input type="password" name="Sifre" placeholder="Şifre">
+ <div class="giris"><input type="submit" value="Giriş"></div>
+ 
+    <p class="alert-danger">@ViewBag.Uyari</p>
+</form>
+
+    </div>
+    <div class="kaydol">
+        <a href="/Kullanici/Create"><input type="button" value="Kaydol"></a>
+    </div>
+</body>
+</html>

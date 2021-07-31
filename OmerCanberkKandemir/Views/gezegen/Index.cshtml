@@ -1,0 +1,40 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.gezegen>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gezegenadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GezegenResim)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gezegenadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GezegenResim)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.gezegenID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.gezegenID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.gezegenID })
+        </td>
+    </tr>
+}
+
+</table>

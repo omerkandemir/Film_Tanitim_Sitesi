@@ -1,0 +1,59 @@
+﻿@model OmerCanberkKandemir.Models.Model.karakter
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+ 
+    
+            <br />
+            <div class="detaybaslik">@Model.baslik</div>
+        <br /><br />
+        <div class="detayresim"><img src="@Model.ResimURL" width="600" height="400" /></div>
+     
+        <br /><br /><br />
+        <div class="biologic">@Model.baslik HAKKINDA BAZI BİLGİLER</div>    
+        <br /><br />
+        <table class="detaytablosu">
+            <tr>
+                <th>Gezegen </th>
+                <th><a href="#">@Model.gezegen.Gezegenadi</a></th>
+            </tr>
+            <tr>
+                <th>Tür </th>
+                <th><a href="#">@Model.Tur.turadi</a></th>
+            </tr> 
+            <tr>
+                <th>Doğduğu yıl</th>
+                <th><a href="#">@Model.dogduguyil</a></th>
+            </tr> 
+          <tr>
+                <th>Ölüm yılı</th>
+                <th><a href="#">@Model.olumyili</a></th>
+            </tr> 
+            <tr>
+                <th>Işın kılıcı</th>
+                <th><a href="#"><img src="@Model.silah.KullandığıSilah" height="50" width="150" /></a></th>
+            </tr> 
+            <tr>
+                <th>Birliği</th>
+                <th><a href="#">@Model.mezhep.Mezhepadi</a></th>
+            </tr>
+            <tr>
+                <th>Ustası</th>
+                <th><a href="#">@Model.usta</a></th>
+            </tr>
+            <tr>
+                <th>Padawanı</th>
+                <th><a href="#">@Model.padawan</a></th>
+            </tr>
+            </table> 
+        <div class="detayyazi"> @Html.Raw(Model.yazi)</div>          
+</div>
+<p>
+    @* @Html.ActionLink("Edit", "Edit", new { id = Model.karakterID }) |*@
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

@@ -1,0 +1,35 @@
+﻿@model OmerCanberkKandemir.Models.Model.gezegen
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>gezegen</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Gezegenadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gezegenadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GezegenResim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GezegenResim)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.gezegenID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

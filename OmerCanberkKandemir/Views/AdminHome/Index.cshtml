@@ -1,0 +1,11 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+    @foreach (var item in Model)
+    {
+        @item.Eposta
+    }

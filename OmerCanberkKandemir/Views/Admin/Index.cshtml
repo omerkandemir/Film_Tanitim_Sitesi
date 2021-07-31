@@ -1,0 +1,40 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.Admin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Oluştur", "Create")
+</p>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Eposta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eposta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sifre)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.AdminID }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.AdminID }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.AdminID })
+        </td>
+    </tr>
+}
+
+</table>

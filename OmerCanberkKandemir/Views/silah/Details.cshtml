@@ -1,0 +1,27 @@
+﻿@model OmerCanberkKandemir.Models.Model.silah
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>silah</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KullandığıSilah)
+        </dt>
+
+        <dd>
+            <img src="@Model.KullandığıSilah" width="512" height="180">
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.silahID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

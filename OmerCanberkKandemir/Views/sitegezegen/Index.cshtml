@@ -1,0 +1,43 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.gezegen>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="starwarskarakterolusturmaekrani">
+
+    <h2>Gezegenler</h2>
+
+    <p>
+        @Html.ActionLink("Gezegen oluştur", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Gezegenadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GezegenResim)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gezegenadi)
+                </td>
+                <td>
+                   <img src="@Html.DisplayFor(modelItem => item.GezegenResim)" width="50" height="50"/> 
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.gezegenID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.gezegenID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.gezegenID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

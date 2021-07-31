@@ -1,0 +1,51 @@
+﻿@model OmerCanberkKandemir.Models.Model.makale
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>makale</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.karakter.baslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.karakter.baslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.baslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.baslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResimURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.yazi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.yazi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.makaleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

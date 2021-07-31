@@ -1,0 +1,94 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.karakter>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.gezegen.Gezegenadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mezhep.Mezhepadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.silah.KullandığıSilah)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tur.turadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.baslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.yazi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.padawan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dogduguyil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.olumyili)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.gezegen.Gezegenadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mezhep.Mezhepadi)
+        </td>
+        <td>
+           <img src="@item.silah.KullandığıSilah" width="100" height="100"/>  @*<img src="@item.silah" width="150" height="100" />*@
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tur.turadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td>
+        <td>
+            <img src="@item.ResimURL" width="150" height="100"/>
+        </td>
+        <td>
+            @Html.Raw(item.yazi);
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.padawan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dogduguyil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.olumyili)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.karakterID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.karakterID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.karakterID })
+        </td>
+    </tr>
+}
+
+</table>

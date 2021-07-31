@@ -1,0 +1,68 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.karakter>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    @*<table class="table">*@
+
+
+    @foreach (var karakter in Model)
+    {
+
+        <a href="/sitekarakter/Details/@karakter.karakterID">
+            <div style="float:left;" class="character">
+                @*<tr>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.gezegen.Gezegenadi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.mezhep.Mezhepadi)
+                    </td>*@
+
+                @*<td>*@
+
+                @*</td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Tur.turadi)
+                    </td>*@
+                @*<td>*@
+                @karakter.baslik
+                @*</td>
+                    <td>*@
+
+                <img src="@karakter.ResimURL" width="200" height="150" />
+                @*</td>*@<div class="ısinkilici">
+                    <img src="@karakter.silah.KullandığıSilah" width="200" height="75" />
+                </div>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.yazi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.usta)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.padawan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dogduguyil)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.olumyili)
+                    </td>*@
+                @* <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.karakterID }) |*@
+                @*@Html.ActionLink("Details", "Details", new { id = item.karakterID })*@
+                @*  @Html.ActionLink("Delete", "Delete", new { id=item.karakterID })
+                        </td>
+                    </tr>*@
+
+            </div>
+        </a>
+    }
+    <button class="starwarskarakterolustur">
+        @Html.ActionLink("Star Wars Karakteri Oluştur", "Create")
+    </button>
+    @*</table>*@

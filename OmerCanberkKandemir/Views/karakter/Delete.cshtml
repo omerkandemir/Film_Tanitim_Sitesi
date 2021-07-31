@@ -1,0 +1,113 @@
+﻿@model OmerCanberkKandemir.Models.Model.karakter
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>karakter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.gezegen.Gezegenadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gezegen.Gezegenadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mezhep.Mezhepadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mezhep.Mezhepadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.silah.KullandığıSilah)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.silah.KullandığıSilah)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tur.turadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tur.turadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.baslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.baslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResimURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.yazi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.yazi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.padawan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.padawan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dogduguyil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dogduguyil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.olumyili)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.olumyili)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

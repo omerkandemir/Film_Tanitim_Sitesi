@@ -1,0 +1,52 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.makale>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.karakter.baslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.baslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.yazi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.karakter.baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResimURL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.yazi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.makaleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.makaleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.makaleID })
+        </td>
+    </tr>
+}
+
+</table>

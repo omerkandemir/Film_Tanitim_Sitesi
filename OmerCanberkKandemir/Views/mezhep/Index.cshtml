@@ -1,0 +1,34 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.mezhep>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Mezhepadi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mezhepadi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.mezhepID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.mezhepID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.mezhepID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.Tur>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="starwarskarakterolusturmaekrani">
+<h2>Türler</h2>
+
+<p>
+    @Html.ActionLink("Tür Oluştur", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.turadi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.turadi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.turID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.turID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.turID })
+        </td>
+    </tr>
+}
+
+</table>
+</div>

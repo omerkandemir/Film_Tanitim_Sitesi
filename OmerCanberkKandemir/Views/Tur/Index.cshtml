@@ -1,0 +1,34 @@
+﻿@model IEnumerable<OmerCanberkKandemir.Models.Model.Tur>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.turadi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.turadi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.turID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.turID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.turID })
+        </td>
+    </tr>
+}
+
+</table>
